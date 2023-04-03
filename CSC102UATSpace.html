@@ -1,0 +1,65 @@
+ <!-- Sarah M, for CS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Space Program</title>
+    <link rel="stylesheet" href="UAT Space.css">
+    <style>
+         p{
+            font-size: 12pt;
+            font-family: 'Times New Roman';
+            color: black
+            
+         }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.discordapp.com/attachments/587528166248284161/1076700352415543407/UATspaceLogo-2.jpg">
+    <h1>UAT Space Program</h1>
+
+    <p>
+        Test of the document write function. 
+    </p>
+    <p>
+        Test of the paragraph tags.
+    </p>
+    <p>
+<p id="countdown">10</p>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<script>
+let countdownInterval;
+let currTme = 10;
+const countdownElement = document.getElementById("countdown");
+
+function startCountdown() {
+  currTme = 10;
+  countdownElement.innerText = currTme;
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    currTme--;
+    if (currTme >= 0) {
+      countdownElement.innerText = currTme;
+    }
+    if (currTme === 0) {
+      clearInterval(countdownInterval);
+      alert("Blast Off!");
+    }
+  }, 1000);
+}
+
+function stopCountdown() {
+  clearInterval(countdownInterval);
+  currTme = 10;
+  countdownElement.innerText = currTme;
+}
+
+document.getElementById("start").addEventListener("click", startCountdown);
+document.getElementById("stop").addEventListener("click", stopCountdown);
+</script>
+</body>
+</html>
