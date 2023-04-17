@@ -1,0 +1,44 @@
+/*Sarah McWhite => CSC102 W2 Assignment Due April 9*/ 
+body {/*displays background*/
+    background-color: rgb(255, 255, 255);
+    font-size: 1.0em;
+}
+
+h1 {
+     /*changes  the UAT Space program header*/ 
+    color: rgb(100, 196, 151); /*changes color specifically*/
+}
+#intro {
+    font-size:  1.0em;
+    color: rgb(141, 5, 5);
+}
+.colorful {
+    color: rgb(49, 55, 66);
+}
+p {
+    text-align:left; /*aligns text=> LEFT*/
+    color: rgb(8, 8, 2);
+}
+table {
+    border-collapse: collapse;
+    width: 50%; /*adjusts the width of the table rows via % scale*/
+}
+
+th {
+	border-style:groove;
+	padding:15px;
+    width: 50%; /*adjust the width of the table rows*/
+}
+td{
+	border-style: solid;
+	padding:5px;
+        
+}
+
+tr {
+    height: 20px; /*set the height tr*/
+}
+
+tr:hover {
+    background-color: #f5f5f5; /*sets background of the tr*/
+}

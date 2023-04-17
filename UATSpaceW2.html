@@ -1,0 +1,72 @@
+<!--Sarah McWhite CSC102 W2 AssignmentDue April 9-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Space Program</title>
+    <link rel="stylesheet" href="UATSpaceW2.css">
+    <script src="UATSpaceJava.js"></script>
+    <style>
+        p {
+            font-size: 12pt;
+            font-family: 'Times New Roman';
+            color: black;
+        }
+    </style>
+    <!-- Link the code.js file to the main HTML file -->
+    <script src="UATSpaceJava.js"></script>
+</head>
+<body>
+    <img src="https://cdn.discordapp.com/attachments/587528166248284161/1076700352415543407/UATspaceLogo-2.jpg">
+    <h1>UAT Space Program</h1>
+
+    <p>
+    This is a test of the document write function.
+    </p>
+    <p>
+    This is a test of the paragraph write function.
+    </p>
+    <p id="countdown">10</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        let countdownInterval;
+        let currTme = 10;
+        const countdownElement = document.getElementById("countdown");
+
+        function startCountdown() {
+  console.log("Start button clicked");
+  let currTme = 10;
+  countdownElement.innerText = currTme;
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    currTme--;
+    /*displays launch warning*/
+    if (currTme < 5) {
+      countdownElement.innerText = `Warning: Less than 1/2 way to launch, time left = ${currTme}`;
+    } else {
+      countdownElement.innerText = currTme;
+    }/*displays blastoff*/
+    if (currTme === 0) {
+      clearInterval(countdownInterval);
+      countdownElement.innerText = "Blastoff";
+    }
+  }, 1000);
+}
+
+// display current time repeatedly
+setInterval(() => {
+  const currentTime = new Date();
+  console.log(currentTime.toLocaleTimeString());
+});
+
+function stopCountdown() {
+  clearInterval(countdownInterval);
+  currTme = 10;
+  countdownElement.innerText = currTme;
+}
+</script>
+</body>
+</html>
