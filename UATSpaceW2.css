@@ -1,13 +1,21 @@
-/*Sarah McWhite => CSC102 W2 Assignment Due April 9*/ 
-body {/*displays background*/
+/*Sarah McWhite => CSC102 W2 Onward*/ 
+body { /*displays background*/
     background-color: rgb(255, 255, 255);
     font-size: 1.0em;
 }
 
 h1 {
      /*changes  the UAT Space program header*/ 
-    color: rgb(100, 196, 151); /*changes color specifically*/
+    color: rgb(255, 255, 255); /*changes text color specifically*/
+
 }
+
+p{
+    
+
+
+}
+
 #intro {
     font-size:  1.0em;
     color: rgb(141, 5, 5);
